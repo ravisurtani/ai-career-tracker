@@ -53,13 +53,13 @@ incident_schema = {
     "required": ["severity", "impact_summary", "affected_percentage", "recommended_next_steps"],
 }
 
-incident = [
+incidents = [
     "UPI transactions failing intermittently since 2:15 PM, affecting roughly 12% of traffic.",
     "Single customer complain about a delay NEFT credit, no other reports",
     "Core banking database showing high latency, response times up 400% in the last 10 minutes.",
 ]
 
-for desc in incident:
+for desc in incidents:
     result = ask_gemini(
         question=f"Analyize this incident: {desc}",
         temperature=0.2,
